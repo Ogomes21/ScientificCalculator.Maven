@@ -2,6 +2,7 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class CoreFeatures {
 
@@ -18,10 +19,14 @@ public class CoreFeatures {
     //Errors must be cleared before any other operation can take place
     //Each operation should automatically update the display
 
-    private static int displayMode;
+
+
     public static void setDisplayMode(int givenDisplayMode) {
         displayMode = givenDisplayMode;
     }
+
+    //encapsulate the bit depth, height, width, and refresh rate of a GraphicsDevice
+    private static int displayMode;
 
     //clear display
     public static void clearScreen() {
@@ -29,24 +34,26 @@ public class CoreFeatures {
         System.out.flush();
     }
 
+    //perform addition, subtraction, multiplication, and division
     public static void main(String args []) {
 
         double firstNumber;
         double secondNumber;
         double answer = 0;
+
         String operator;
 
         Scanner Calculator = new Scanner(System.in);
 
         System.out.println("\\\\CALCULATOR\\\\");
 
-        System.out.println("Enter first number");
+        System.out.println("Enter first number.");
         firstNumber = Calculator.nextDouble();
 
-        System.out.println("Enter math operator to use for this calculation");
+        System.out.println("Enter math operator (+, -, x, /, sqr) to use for this calculation");
         operator = Calculator.next();
 
-        System.out.println("Enter second number)");
+        System.out.println("Enter second number.");
         secondNumber = Calculator.nextDouble();
 
         switch (operator) {
@@ -62,6 +69,8 @@ public class CoreFeatures {
             case "*":
                 answer = firstNumber * secondNumber;
                 break;
+            case "sqr":
+                answer = firstNumber * firstNumber;
             default:
                 System.out.println("Incorrect operator");
                 break;
@@ -70,9 +79,8 @@ public class CoreFeatures {
         System.out.println(answer);
     }
 
-    }
-
 }
+
 
 
 
