@@ -40,7 +40,6 @@ public class CoreFeatures {
         double firstNumber;
         double secondNumber;
         double answer = 0;
-
         String operator;
 
         Scanner Calculator = new Scanner(System.in);
@@ -50,7 +49,7 @@ public class CoreFeatures {
         System.out.println("Enter first number.");
         firstNumber = Calculator.nextDouble();
 
-        System.out.println("Enter math operator (+, -, x, /, sqr) to use for this calculation");
+        System.out.println("Enter math operator (+, -, x, /, sqr, sqrt) to use for this calculation");
         operator = Calculator.next();
 
         System.out.println("Enter second number.");
@@ -71,8 +70,11 @@ public class CoreFeatures {
                 break;
             case "sqr":
                 answer = firstNumber * firstNumber;
+            case "sqrt": //unsure about this
+                Math.sqrt(firstNumber);
+                break;
             default:
-                System.out.println("Incorrect operator");
+                System.out.println("Incorrect operator!");
                 break;
         }
 
