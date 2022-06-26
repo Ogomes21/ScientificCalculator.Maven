@@ -19,72 +19,39 @@ public class CoreFeatures {
     //Errors must be cleared before any other operation can take place
     //Each operation should automatically update the display
 
-
-
-    public static void setDisplayMode(int givenDisplayMode) {
-        displayMode = givenDisplayMode;
-    }
-
-    //encapsulate the bit depth, height, width, and refresh rate of a GraphicsDevice
-    private static int displayMode;
-
-    //clear display
+    //clear display; press escape to clear
     public static void clearScreen() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }
 
     //perform addition, subtraction, multiplication, and division
-    public static void main(String args []) {
 
-        double firstNumber;
-        double secondNumber;
-        double answer = 0;
-        String operator;
-
-        Scanner Calculator = new Scanner(System.in);
-
-        System.out.println("\\\\CALCULATOR\\\\");
-
-        System.out.println("Enter first number.");
-        firstNumber = Calculator.nextDouble();
-
-        System.out.println("Enter math operator (+, -, x, /, sqr, sqrt) to use for this calculation");
-        operator = Calculator.next();
-
-        System.out.println("Enter second number.");
-        secondNumber = Calculator.nextDouble();
-
-        switch (operator) {
-            case "+":
-                answer = firstNumber + secondNumber;
-                break;
-            case "-":
-                answer = firstNumber - secondNumber;
-                break;
-            case "/":
-                answer = firstNumber / secondNumber;
-                break;
-            case "*":
-                answer = firstNumber * secondNumber;
-                break;
-            case "sqr":
-                answer = firstNumber * firstNumber;
-            case "sqrt": //unsure about this
-                Math.sqrt(firstNumber);
-                break;
-            default:
-                System.out.println("Incorrect operator!");
-                break;
+    //Method formatting:
+    public static int example(int x, int y) {
+        //Do some logic
+        //And return a value
+            return x - y;
         }
 
-        System.out.println(answer);
+        //Addition
+        public int add(int number1, int number2) {
+        return number1 + number2;
     }
+        //Subtraction
+        public int subtract(int number1, int number2) {
+        return number1 - number2;
+    }
+        //Multiplication
+        public int multiply(int number1, int number2) {
+        return number1 * number2;
+        }
 
-}
+        //Division
+        public static int divide(int number1, int number2) {
+        return number1 / number2;
+        }
 
-
-
-
+    }
 
 

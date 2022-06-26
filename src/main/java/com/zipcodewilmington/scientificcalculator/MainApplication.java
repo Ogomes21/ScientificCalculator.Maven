@@ -21,9 +21,39 @@ public class MainApplication {
 
     //Method formatting:
     public static void main(String[] args) {
-        example(2,4);
-        System.out.println(example(2,4));
+
+        //object AddFormula
+        CoreFeatures AddFormula = new CoreFeatures();
+        AddFormula.add(2, 4);
+        double ShowAddFormula = AddFormula.add(2, 4);
+        String printAddFormula = String.valueOf(ShowAddFormula);
+        System.out.println(printAddFormula);
+
+        //object SubtractFormula
+        CoreFeatures SubtractFormula = new CoreFeatures();
+        SubtractFormula.subtract(10, 5);
+        double ShowSubtractFormula = SubtractFormula.subtract(10,5);
+        String printSubtractFormula = String.valueOf(ShowSubtractFormula);
+        System.out.println(printSubtractFormula);
+
+        //object MultiplyFormula
+        CoreFeatures MultiplyFormula = new CoreFeatures();
+        MultiplyFormula.multiply(3, 3);
+        double ShowMultiplyFormula = MultiplyFormula.multiply(2,3);
+        String printMultiplyFormula = String.valueOf(ShowMultiplyFormula);
+        System.out.println(printMultiplyFormula);
+
+        //object DivideFormula
+        CoreFeatures DivideFormula = new CoreFeatures();
+        DivideFormula.divide(8,4);
+        double ShowDivideFormula = DivideFormula.divide(8,4);
+        String printDivideFormula = String.valueOf(ShowDivideFormula);
+        System.out.println(printDivideFormula);
     }
+
+        //example(2,4);
+       //System.out.println(example(2,4));
+
     public static int example(int x, int y) {
         //Do some logic
         //And return a value
